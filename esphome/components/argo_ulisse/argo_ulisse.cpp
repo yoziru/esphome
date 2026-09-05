@@ -229,7 +229,7 @@ uint8_t ArgoUlisseClimate::process_temperature_(float temperature) {
 
 climate::ClimateTraits ArgoUlisseClimate::traits() {
   climate::ClimateTraits traits = climate_ir::ClimateIR::traits();
-  traits.set_supports_current_temperature(true);
+  traits.add_feature_flags(climate::CLIMATE_SUPPORTS_CURRENT_TEMPERATURE);
   return traits;
 }
 
